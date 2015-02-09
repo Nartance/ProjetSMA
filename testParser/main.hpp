@@ -13,7 +13,6 @@
 #include <QTextStream>
 #include <QMessageBox>
 
-#include "Mur.hpp"
 #include "parserfactory.h"
 
 typedef std::map<QString, std::vector<QGraphicsItem*> > mapType;

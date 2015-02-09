@@ -16,7 +16,7 @@ QGraphicsItem * ParserFactory::instancierItem(const QString & nom, const QPointF
 {
     if( nom == "Mur")
         return new Mur(TL, BR);
-    /*else if ( nom == "Normal")
+    else if ( nom == "Normal")
     {
         Normal * n = new Normal(qrand());
         n->setPos(TL);
@@ -40,6 +40,6 @@ QGraphicsItem * ParserFactory::instancierItem(const QString & nom, const QPointF
         s->setPos(TL);
         return s;
     }
-*/
+
     return NULL ;
 }

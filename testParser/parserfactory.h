@@ -2,6 +2,11 @@
 #define PARSERFACTORY_H
 
 #include "main.hpp"
+#include "Mur.hpp"
+#include "Assassin.hpp"
+#include "Cible.hpp"
+#include "Normal.hpp"
+#include "Surveillant.hpp"
 
 class ParserFactory
 {

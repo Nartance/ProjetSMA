@@ -45,8 +45,6 @@ int main(int argc, char *argv[])
 
 void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 {
-   // ParserFactory factory = ParserFactory.getInstance();
-
     QFile file(filename);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -76,26 +74,28 @@ void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 
     s = flux.readLine();
 
-    while( s != QString("DATA"))
+    QPointF limits [2];
+
+    while( (s = flux.readLine()) != QString("DATA"))
     {
-        QPointF limits [2];
+        QString type (s[0]);
+        type += s.remove(0, 1).toLower();
 
-        while( (s = flux.readLine()) == QString("MUR"))
+        int nbPoint = 1;
+
+        if( type == QString("Mur"))
+            nbPoint = 2;
+
+        for(int i = 0 ; i < nbPoint ; ++i)
         {
-            QString type (s[0]);
-            type += s.remove(0, 1).toLower();
-
-            for(int i = 0 ; i < 2 ; ++i)
-            {
-                s = flux.readLine();
-                ssplit = s.split(" ");
-                limits[ i ] = QPointF((qreal)ssplit[1].toInt(), (qreal)ssplit[2].toInt());
-            }
-
-            flux.readLine();
-
-            scene->addItem(ParserFactory::getInstance().instancierItem(type, limits[0], limits[1] ));
+            s = flux.readLine();
+            ssplit = s.split(" ");
+            limits[ i ] = QPointF((qreal)ssplit[1].toInt(), (qreal)ssplit[2].toInt());
         }
+
+        flux.readLine();
+
+        scene->addItem(ParserFactory::getInstance().instancierItem(type, limits[0], limits[1] ));
     }
 
     while(! flux.atEnd())
