@@ -1,8 +1,15 @@
 #include "parserfactory.h"
 
+ParserFactory ParserFactory::_instance = ParserFactory();
+
 ParserFactory::ParserFactory()
 {
 
+}
+
+ParserFactory& ParserFactory::getInstance()
+{
+    return _instance;
 }
 
 QGraphicsItem * ParserFactory::instancierItem(const QString & nom, const QPointF & TL, const QPointF & BR)

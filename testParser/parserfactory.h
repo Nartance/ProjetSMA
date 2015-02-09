@@ -5,9 +5,12 @@
 
 class ParserFactory
 {
+private:
+    static ParserFactory _instance;
+    ParserFactory();
 public:
 
-    ParserFactory();
+    static ParserFactory& getInstance();
     QGraphicsItem * instancierItem(const QString &, const QPointF &, const QPointF &);
 };
 

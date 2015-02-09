@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
 void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 {
-    ParserFactory factory;
+   // ParserFactory factory = ParserFactory.getInstance();
 
     QFile file(filename);
 
@@ -94,7 +94,7 @@ void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 
             flux.readLine();
 
-            scene->addItem(factory.instancierItem(type, limits[0], limits[1] ));
+            scene->addItem(ParserFactory::getInstance().instancierItem(type, limits[0], limits[1] ));
         }
     }
 
