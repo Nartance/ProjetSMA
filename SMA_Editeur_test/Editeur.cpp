@@ -1,4 +1,4 @@
-#include "Algorithme.hpp"
+#include "Editeur.hpp"
 
 Editeur::Editeur(const QGraphicsScene * scene) : scene_(scene)
 {

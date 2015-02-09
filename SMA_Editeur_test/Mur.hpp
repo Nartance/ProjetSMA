@@ -1,12 +1,11 @@
 #ifndef MUR_HPP
 #define MUR_HPP
 
-#include "main.hpp"
+#include "Include.hpp"
 
 class Mur : public QGraphicsItem
 {
     public :
-        Mur(const int &);
         Mur(const QPointF &, const QPointF &);
 
         QRectF boundingRect() const;
@@ -18,7 +17,6 @@ class Mur : public QGraphicsItem
         void advance(int);
 
     private :
-        int mur_;
         QPointF TL_;
         QPointF BR_;
 

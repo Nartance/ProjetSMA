@@ -1,17 +1,30 @@
 QT += widgets
 
 HEADERS += \
-    Algorithme.hpp \
     main.hpp \
     Mur.hpp \
-    Porte.hpp
+    Porte.hpp \
+    Assassin.hpp \
+    Cible.hpp \
+    General.hpp \
+    Include.hpp \
+    Normal.hpp \
+    Personnage.hpp \
+    Editeur.hpp \
+    Surveillant.hpp
 
 SOURCES += \
-    Algorithme.cpp \
     main.cpp \
     Foncteurs.cpp \
     Mur.cpp \
-    Porte.cpp
+    Porte.cpp \
+    Assassin.cpp \
+    Cible.cpp \
+    General.cpp \
+    Normal.cpp \
+    Personnage.cpp \
+    Editeur.cpp \
+    Surveillant.cpp
 
 DISTFILES +=
 

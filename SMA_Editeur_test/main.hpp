@@ -15,9 +15,12 @@
 #include <QFile>
 #include <QTextStream>
 
-#include "Algorithme.hpp"
+#include "Editeur.hpp"
 #include "Mur.hpp"
 #include "Porte.hpp"
+#include "Assassin.hpp"
+#include "Cible.hpp"
+#include "Normal.hpp"
 
 QPointF reverseCoord(const QPointF &);
 void ajouterTL(std::priority_queue<qreal, std::vector<qreal>, std::greater<qreal> > &, const QPointF&, const QPointF&, const qreal&);
@@ -30,6 +33,8 @@ void construire1mur(QGraphicsScene *, const int&,
                     const QPointF&);
 void creer_limites(QGraphicsScene *);
 void creer_murs(QGraphicsScene *, const QPointF&, const QPointF&);
+void installer_personnage(QGraphicsScene *);
+
 QTextStream& operator<<( QTextStream& o, const QGraphicsItem * pQGI);
 
 

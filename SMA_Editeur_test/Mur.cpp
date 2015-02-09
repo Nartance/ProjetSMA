@@ -1,11 +1,6 @@
 #include "Mur.hpp"
 
-Mur::Mur(const int & mur) : mur_(mur)
-{
-
-}
-
-Mur::Mur(const QPointF & TL, const QPointF & BR) : mur_(-1), TL_(TL), BR_(BR)
+Mur::Mur(const QPointF & TL, const QPointF & BR) : TL_(TL), BR_(BR)
 {
 
 }
@@ -15,29 +10,8 @@ QRectF Mur::boundingRect() const
 {
     QRectF boite;
 
-    switch(mur_)
-    {
-        case -1 :
-            boite.setTopLeft(TL_);
-            boite.setBottomRight(BR_);
-            break;
-
-        case 0 :
-            boite.setRect(scene()->width() - 50, 50, 1, scene()->height() - 100);
-            break;
-
-        case 1 :
-            boite.setRect(50, scene()->height() - 50, scene()->width() - 100, 1);
-            break;
-
-        case 2 :
-            boite.setRect(50, 50, 1, scene()->height() - 100);
-            break;
-
-        case 3 :
-            boite.setRect(50, 50, scene()->width() - 100, 1);
-            break;
-    }
+    boite.setTopLeft(TL_);
+    boite.setBottomRight(BR_);
 
     return boite;
 }

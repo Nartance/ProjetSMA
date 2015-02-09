@@ -14,6 +14,7 @@ int main(int argc, char ** argv)
     scene.addRect(QRect(50,50,largeur_,hauteur_), QPen(QColor(255,255,255)), QBrush(QColor(255,255,255)));
 
     creer_limites(&scene);
+    installer_personnage(&scene);
 
     Editeur map(&scene);
     map.cartographier();
@@ -228,13 +229,81 @@ void creer_murs(QGraphicsScene * scene, const QPointF& TL_1, const QPointF& TL_2
     }
 }
 
+void installer_personnage(QGraphicsScene * scene)
+{
+    int nbNormaux = 30; //à changer !
+
+    int moduloX = largeur_ - 20;
+    int moduloY = hauteur_ - 20;
+
+    std::vector<Personnage*> listPerso;
+
+    //Placement de l'assassin
+    Assassin* assassin = new Assassin(0);
+    assassin->setPos(change_repere(QPoint((qreal)(qrand()%moduloX), (qreal)(qrand()%moduloY))));
+    scene->addItem(assassin);
+
+    listPerso.push_back(assassin);
+
+    //Placement de la cible
+    Cible* cible = new Cible(0);
+    bool enoughFar = false;
+    do{
+        cible->setPos(change_repere(QPoint((qreal)(qrand()%moduloX),(qreal)( qrand()%moduloY))));
+        QPointF posAssassin = assassin->pos();
+        QPointF posCible = cible->pos();
+
+        enoughFar = !cible->collidesWithItem(assassin)
+                && QLineF(posAssassin, posCible).length() > 130.0f;
+
+
+    } while( !enoughFar );
+    scene->addItem(cible);
+    listPerso.push_back(cible);
+
+    //Placement des surveillants
+
+    //Placement des normaux
+    for(int i = 0; i < nbNormaux; ++i)
+    {
+        int nbIteration = 0 ;
+        Normal* normal = new Normal(0);
+        bool collide = true;
+
+        do
+        {
+            normal->setPos(change_repere(QPoint((qreal)(qrand()%moduloX),(qreal) (qrand()%moduloY))));
+
+            foreach(Personnage* p, listPerso)
+            {
+                if( (collide = normal->collidesWithItem(p) ))
+                    break;
+            }
+
+            ++nbIteration;
+        } while( collide && nbIteration < 100);
+
+        if( !collide)
+        {
+            scene->addItem(normal);
+            listPerso.push_back(normal);
+        }
+    }
+}
+
 QTextStream& operator<<( QTextStream& o, const QGraphicsItem * pQGI)
 {
      QString s = typeid(*pQGI).name();
      s = s.toUpper();
      s = s.remove(0, 6);
-     o << s << "\nTL " << pQGI->boundingRect().topLeft().x() << " " << pQGI->boundingRect().topLeft().y()
-      <<"\nBR " <<  pQGI->boundingRect().bottomRight().x() << " " <<  pQGI->boundingRect().bottomRight().y() << "\n\n";
+
+     if( s == "MUR" )
+     {
+         o << s << "\nTL " << pQGI->boundingRect().topLeft().x() << " " << pQGI->boundingRect().topLeft().y()
+          <<"\nBR " <<  pQGI->boundingRect().bottomRight().x() << " " <<  pQGI->boundingRect().bottomRight().y() << "\n\n";
+     }
+     else
+        o << s << "\nPOS "<< pQGI->pos().x() << " " << pQGI->pos().y() << "\n\n";
 
     return o;
 }
