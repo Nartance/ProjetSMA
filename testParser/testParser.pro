@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         parser.cpp \
-    Mur.cpp
+    Mur.cpp \
+    parserfactory.cpp
 
 HEADERS  += parser.h \
     Mur.hpp \
-    main.hpp
+    main.hpp \
+    parserfactory.h
 
 FORMS    += parser.ui

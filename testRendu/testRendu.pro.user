@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 3.3.0, 2015-01-22T22:25:31. -->
-=======
-<!-- Written by QtCreator 3.2.0, 2015-01-24T17:39:40. -->
->>>>>>> origin/master
+<!-- Written by QtCreator 3.3.0, 2015-01-27T11:02:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{a0370201-6294-49d4-aff9-4efb90fc491b}</value>
+  <value type="QByteArray">{a0cb391f-6985-49f1-b925-5d87afb39b14}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -62,14 +58,14 @@
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.3 MinGW 32bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.3 MinGW 32bit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.53.win32_mingw482_kit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clone de Desktop Qt 5.3 MSVC2010 OpenGL 32bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Clone de Desktop Qt 5.3 MSVC2010 OpenGL 32bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{74fc9d44-dcad-4c50-8907-e807f77b41fd}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:/ISIMA/Simulation/ProjetQT/build-testRendu-Desktop_Qt_5_3_MinGW_32bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Nicolas/Documents/GitHub/ProjetSMA/build-testRendu-Clone_de_Desktop_Qt_5_3_MSVC2010_OpenGL_32bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -80,6 +76,7 @@
       <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibraryAuto">true</value>
       <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>
       <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>
+      <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">false</value>
      </valuemap>
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -122,7 +119,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:/ISIMA/Simulation/ProjetQT/build-testRendu-Desktop_Qt_5_3_MinGW_32bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Nicolas/Documents/GitHub/ProjetSMA/build-testRendu-Clone_de_Desktop_Qt_5_3_MSVC2010_OpenGL_32bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -133,6 +130,7 @@
       <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibraryAuto">true</value>
       <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>
       <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>
+      <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">false</value>
      </valuemap>
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -228,7 +226,7 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">testRendu</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:E:/ISIMA/Simulation/ProjetQT/testRendu/testRendu.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Nicolas/Documents/GitHub/ProjetSMA/testRendu/testRendu.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">testRendu.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
@@ -250,10 +248,10 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>
-  <value type="int">16</value>
+  <value type="int">18</value>
  </data>
  <data>
   <variable>Version</variable>
-  <value type="int">16</value>
+  <value type="int">18</value>
  </data>
 </qtcreator>

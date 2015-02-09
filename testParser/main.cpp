@@ -42,19 +42,10 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-mapType initMap()
-{
-    mapType & dicoType ;
-
-    dicoType.insert(std::make_pair("Mur", vector<Mur*>()));
-    // Remplir les autres !
-
-    return dicoType;
-}
 
 void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 {
-    mapType dicoType = initMap();
+    ParserFactory factory;
 
     QFile file(filename);
 
@@ -103,7 +94,7 @@ void parser(const QString & filename, QGraphicsScene * scene, matInt &grille )
 
             flux.readLine();
 
-            scene->addItem(new Mur( limits[0], limits[1] ));
+            scene->addItem(factory.instancierItem(type, limits[0], limits[1] ));
         }
     }
 

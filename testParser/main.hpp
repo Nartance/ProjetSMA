@@ -14,11 +14,11 @@
 #include <QMessageBox>
 
 #include "Mur.hpp"
+#include "parserfactory.h"
 
 typedef std::map<QString, std::vector<QGraphicsItem*> > mapType;
 typedef std::vector< std::vector < int > > matInt ;
 
-mapType initMap();
 void parser( const QString &, QGraphicsScene *, matInt &grille );
 
 #endif // MAIN_HPP
