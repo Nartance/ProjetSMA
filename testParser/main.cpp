@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         QMessageBox::critical(NULL, "Fichier non trouvé", e.what());
     }
 
-    foreach( std::vector<int> line, grille)
+    /*foreach( std::vector<int> line, grille)
     {
         foreach( int elem, line )
             std::cout << elem << "|" ;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         std::cout << std::endl;
     }
 
-    std::cout << grille.size() << std::endl ;
+    std::cout << grille.size() << std::endl ;*/
 
     QGraphicsView view(&scene);
     view.setRenderHint(QPainter::Antialiasing);

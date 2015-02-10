@@ -1,15 +1,53 @@
+/*!
+ * \file  "Porte.cpp"
+ *
+ * \brief Fichier contenant la définition des méthodes de la classe réprésentant les portes.
+ *
+ * \author Nicolas ARTANCE / David FERAUD
+ * \date 10/02/2015
+ * \version 1
+ */
+
 #include "Porte.hpp"
 
+/*!
+ * \fn  Porte::Porte(const Porte &)
+ *
+ * \brief Constructeur par copie.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ */
 Porte::Porte(const Porte &)
 {
 
 }
 
+
+/*!
+ * \fn  Porte::Porte()
+ *
+ * \brief Constructeur par défaut choisissant un mur de manière randomisée (de 0 à 3 pour chaque pan de mur).
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ */
 Porte::Porte() : mur_(qrand() % 4)
 {
 
 }
 
+/*!
+ * \fn  void Porte::positionnerPorte()
+ *
+ * \brief Positionne la porte sur le mur associé de manière randomisée.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ */
 void Porte::positionnerPorte()
 {
     qreal x_mur_gauche = 49;
@@ -46,13 +84,32 @@ void Porte::positionnerPorte()
             break;
     }
 }
-// Forme englobante
+
+/*!
+ * \fn  QRectF Porte::boudingRect() const
+ *
+ * \brief Détermine la forme englobante de l'objet.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \return Le rectangle englobant de l'objet.
+ */
 QRectF Porte::boundingRect() const
 {
     return boite_;
 }
 
-// Forme détaillé
+/*!
+ * \fn  QPainterPath Porte::shape() const
+ *
+ * \brief Détaille la forme englobante de l'objet.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \return Le painterpath associé.
+ */
 QPainterPath Porte::shape() const
 {
     QPainterPath path;
@@ -60,6 +117,16 @@ QPainterPath Porte::shape() const
     return path;
 }
 
+/*!
+ * \fn  void Porte::paint(QPainter * painter, const QStyleOptionGraphicsItem *, QWidget *)
+ *
+ * \brief Dessine l'objet.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \param painter ( Entrée / Sortie ) Le painter.
+ */
 void Porte::paint(QPainter * painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     // Couleur du trace
@@ -69,6 +136,16 @@ void Porte::paint(QPainter * painter, const QStyleOptionGraphicsItem *, QWidget 
 
 }
 
+/*!
+ * \fn void Porte::advance(int phase)
+ *
+ * \brief Fait déplacer l'objet.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \param phase ( Entrée ) Le pas d'avancement.
+ */
 void Porte::advance(int phase)
 {
     if(!phase)

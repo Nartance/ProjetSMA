@@ -5,6 +5,9 @@
 #include <cmath>
 #include <exception>
 #include <iostream>
+#include <time.h>
+#include <queue>
+#include <vector>
 
 #include <QtGlobal>
 #include <QtCore/qmath.h>
