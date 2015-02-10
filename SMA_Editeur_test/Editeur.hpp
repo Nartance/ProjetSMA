@@ -106,6 +106,8 @@ private :
     /*! \brief Création d'un mur entre deux points */
     void creer_murs(QGraphicsScene *, const QPointF&, const QPointF&);
 
+    /*! \brief Ajouter un item dans la scène */
+    bool test_ajout_item( QGraphicsItem*, const int &, const int &, const int &, const int &);
 
     /***************************************DONNEES MEMBRES*********************************************************/
     /*! \brief Scène */
@@ -122,6 +124,9 @@ private :
 
     /*! \brief Largeur de la scène murs compris */
     int elemSize_;
+
+    /*! \brief La liste des items présents dans la scène*/
+    std::vector<QGraphicsItem*> listItem_;
 
 
 };

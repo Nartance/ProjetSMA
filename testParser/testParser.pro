@@ -26,13 +26,13 @@ SOURCES += main.cpp\
 HEADERS  += parser.h \
     Mur.hpp \
     main.hpp \
-    parserfactory.h \
     Assassin.hpp \
     Cible.hpp \
     General.hpp \
     Include.hpp \
     Normal.hpp \
     Surveillant.hpp \
-    Personnage.hpp
+    Personnage.hpp \
+    parserfactory.hpp
 
 FORMS    += parser.ui

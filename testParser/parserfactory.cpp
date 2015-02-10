@@ -1,17 +1,60 @@
-#include "parserfactory.h"
+/*!
+ * \file  "ParserFactory.cpp"
+ *
+ * \brief Fichier contenant la définition des méthodes de la classe réprésentant l'usine du parser de fichier de scène.
+ *
+ * \author Nicolas ARTANCE / David FERAUD
+ * \date 10/02/2015
+ * \version 1
+ */
+#include "parserfactory.hpp"
 
+/*! \brief Instanciation de l'instance unique */
 ParserFactory ParserFactory::_instance = ParserFactory();
 
+/*!
+ * \fn  ParserFactory::ParserFactory()
+ *
+ * \brief Constructeur.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ */
 ParserFactory::ParserFactory()
 {
 
 }
 
+/*!
+ * \fn  ParserFactory::getInstance()
+ *
+ * \brief Constructeur.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \return Une référence de l'instance unique.
+ */
 ParserFactory& ParserFactory::getInstance()
 {
     return _instance;
 }
 
+/*!
+ * \fn  QGraphicsItem * ParserFactory::instancierItem(const QString & nom, const QPointF & TL, const QPointF & BR)
+ *
+ * \brief Instancie un item de la scène selon son nom.
+ *
+ * \author  Nicolas Artance / David Feraud
+ * \date  10/02/2015
+ *
+ * \param nom ( Entrée ) Nom de l'instance.
+ * \param TL ( Entrée ) Le point topleft pour les murs, la position pour les autres items.
+ * \param BR ( Entrée ) Le point bottomright pour les murs (inutilisé pour les autres items).
+ *
+ * \return L'item instancié.
+ */
 QGraphicsItem * ParserFactory::instancierItem(const QString & nom, const QPointF & TL, const QPointF & BR)
 {
     if( nom == "Mur")

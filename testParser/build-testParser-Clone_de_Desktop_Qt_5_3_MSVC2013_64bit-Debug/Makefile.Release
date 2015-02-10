@@ -430,7 +430,7 @@ release\main.obj: ..\main.cpp ..\parser.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qdialog.h \
-		..\parserfactory.h \
+		..\parserfactory.hpp \
 		..\Mur.hpp \
 		..\Assassin.hpp \
 		..\General.hpp \
@@ -679,7 +679,7 @@ release\Mur.obj: ..\Mur.cpp ..\Mur.hpp \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qdialog.h \
-		..\parserfactory.h \
+		..\parserfactory.hpp \
 		..\Assassin.hpp \
 		..\General.hpp \
 		..\Cible.hpp \
@@ -696,7 +696,7 @@ release\Mur.obj: ..\Mur.cpp ..\Mur.hpp \
 		..\Normal.hpp \
 		..\Surveillant.hpp
 
-release\parserfactory.obj: ..\parserfactory.cpp ..\parserfactory.h \
+release\parserfactory.obj: ..\parserfactory.cpp ..\parserfactory.hpp \
 		..\main.hpp \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qapplication.h \
@@ -965,7 +965,7 @@ release\Assassin.obj: ..\Assassin.cpp ..\Assassin.hpp \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qdialog.h \
-		..\parserfactory.h \
+		..\parserfactory.hpp \
 		..\Cible.hpp \
 		..\Personnage.hpp \
 		..\Include.hpp \
@@ -1238,7 +1238,7 @@ release\General.obj: ..\General.cpp ..\General.hpp \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qdialog.h \
-		..\parserfactory.h \
+		..\parserfactory.hpp \
 		..\Assassin.hpp \
 		..\Personnage.hpp \
 		..\Include.hpp \
@@ -1381,7 +1381,7 @@ release\Normal.obj: ..\Normal.cpp ..\Normal.hpp \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.3\msvc2013_64\include\QtWidgets\qdialog.h \
-		..\parserfactory.h \
+		..\parserfactory.hpp \
 		..\Assassin.hpp \
 		..\Personnage.hpp \
 		..\Include.hpp \

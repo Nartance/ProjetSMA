@@ -21,6 +21,7 @@
 #include <QTextStream>
 #include <QTime>
 #include <QTimer>
+#include <QVector4D>
 
 typedef std::vector< std::vector < int > > matInt ;
 
